@@ -4,7 +4,7 @@ metadata:
   labels:
     app: web
   name: web
-  namespace: web-prod
+  namespace: web-uat
 spec:
   replicas: 1
   selector:
