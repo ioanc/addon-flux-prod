@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: web-prod
-  name: web-prod
-  namespace: web-prod
+    app: web
+  name: web
+  namespace: web
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: web-prod
+      app: web
   template:
     metadata:
       labels:
-        app: web-prod
+        app: web
     spec:
       containers:
       - image: nginx
