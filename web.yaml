@@ -2,19 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: web-prod
-  name: web-prod
-  namespace: web-prod
+    app: web-uat
+  name: web-uat
+  namespace: web-uat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web-prod
+      app: web-uat
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: web-prod
+        app: web-uat
     spec:
       containers:
       - image: nginx
