@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: web-uat
-  name: web-uat
-  namespace: web-uat
+    app: web
+  name: web
+  namespace: web
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: web-uat
+      app: web
   template:
     metadata:
       labels:
-        app: web-uat
+        app: web
     spec:
       containers:
       - image: nginx
         name: nginx
-        resources:
-          requests:
-            memory: "100Mi"
-          limits:
-            memory: "200Mi"
+        # resources:
+        #   requests:
+        #     memory: "100Mi"
+        #   limits:
+        #     memory: "200Mi"
