@@ -6,7 +6,7 @@ metadata:
   name: web-prod
   namespace: web-prod
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: web-prod
